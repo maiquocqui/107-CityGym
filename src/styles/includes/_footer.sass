@@ -1,0 +1,107 @@
+footer
+	background: $dgreen
+	color: $white
+	.footer-system
+		background: url(../img/homepattern.jpg) repeat
+		padding: 35px 0
+		text-align: center
+		.module-title
+			color: $white
+			+fs(18rem)
+			line-height: 1.2
+			font-weight: 500
+			margin-bottom: 15px
+		.btn-findbranch
+			display: inline-block
+			+fs(16rem)
+			font-weight: 500
+			text-transform: uppercase
+			color: $green
+			line-height: 20px
+			padding: 10px 25px
+			+bor-rad(50px)
+			background: $yellow
+			.material-icons
+				vertical-align: middle
+				line-height: 1
+			&:hover
+				box-shadow: 5px 5px 20px color-rgba($black,0.1)
+	.footer-top
+		padding: 40px 0
+	.footer-about
+		+media-breakpoint-down(lg)
+			text-align: center
+			margin-bottom: 30px
+		.sitelogo
+			margin-bottom: 10px
+			img
+				height: 34px
+		.company
+			+fs(16rem)
+			font-weight: 500
+			text-transform: uppercase
+			margin-bottom: 10px
+		.title
+			+fs(15rem)
+			color: $lightgreen
+		ul
+			li
+				+fs(13rem)
+				font-weight: 300
+				margin-bottom: 15px
+		a
+			&:hover
+				color: $yellow
+	.footer-col
+		margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			text-align: center
+	.footer-title
+		+fs(18rem)
+		font-weight: 500
+		margin-bottom: 15px
+	.footer-link
+		a
+			display: block
+			+fs(13rem)
+			font-weight: 300
+			&:before
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 0px
+				height: 2px
+				background: $yellow
+				+transition(all,0.5s)
+			&:hover
+				color: $yellow
+				&:before
+					width: 10px
+					margin-right: 5px
+	.footer-bottom
+		background: $green
+		padding: 15px 0
+		.footer-nav
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(md)
+				justify-content: center
+				margin-bottom: 10px
+			a
+				+fs(13rem)
+				font-weight: 300
+				text-decoration: underline
+				+media-breakpoint-down(sm)
+					+fs(12rem)
+				+ a
+					margin-left: 15px
+					+media-breakpoint-down(sm)
+						margin-left: 10px
+				&:hover
+					color: $yellow
+		.copyright
+			+fs(13rem)
+			text-align: right
+			+media-breakpoint-down(md)
+				text-align: center

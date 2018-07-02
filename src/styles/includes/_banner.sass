@@ -1,0 +1,189 @@
+.banner-wrap
+	+pos(rel,null)
+.home-banner
+	+pos(rel,null)
+.banner-slide
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+fs(0)
+		z-index: 3
+		+transform(translateY(-50%))
+		color: $white
+		text-shadow: 0px 3px 5px color-rgba($black,0.1)
+		&:before
+			content: ''
+			font-family: 'linearicons-free'
+			+fs(28rem)
+	.slick-prev
+		left: 100px
+		+media-breakpoint-down(lg)
+			left: 30px
+		+media-breakpoint-down(sm)
+			left: 10px
+		&:before
+			content: '\e875'
+	.slick-next
+		right: 100px
+		+media-breakpoint-down(lg)
+			right: 30px
+		+media-breakpoint-down(sm)
+			right: 10px
+		&:before
+			content: '\e876'
+	.banner-img
+		img
+			width: 100%
+	.item
+		display: block !important
+
+.banner-nav
+	width: 100%
+	max-width: 1230px
+	+pos(abs, null null 0 50%)
+	z-index: 3
+	+transform(translateX(-50%))
+	background: color-rgba($black,0.5)
+	+media-breakpoint-down(lg)
+		left: 15px
+		right: 15px
+		max-width: 100%
+		width: auto
+		+transform(translateX(0%))
+	+media-breakpoint-down(md)
+		width: 100%
+		max-width: 360px
+		left: 50%
+		right: unset
+		+transform(translateX(-50%))
+	+media-breakpoint-down(sm)
+		max-width: 100%
+		+pos(static,null)
+		+transform(translate(0,0))
+	.slick-prev, .slick-next
+		+pos(abs, 0 null 0 null)
+		+fs(0)
+		z-index: 3
+		color: $white
+		text-shadow: 0px 3px 5px color-rgba($black,0.1)
+		background: color-rgba($black,0.5)
+		+media-breakpoint-down(sm)
+			background: color-rgba($black,0.3)
+		&:before
+			content: ''
+			font-family: 'linearicons-free'
+			+fs(28rem)
+			height: 100%
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+	.slick-prev
+		right: 100%
+		+media-breakpoint-down(sm)
+			right: unset
+			left: 0px
+		&:before
+			content: '\e875'
+	.slick-next
+		left: 100%
+		+media-breakpoint-down(sm)
+			left: unset
+			right: 0px
+		&:before
+			content: '\e876'
+
+	.item
+		display: block !important
+		cursor: pointer
+	.banner-caption
+		text-align: center
+		color: $white
+		padding: 10px 0
+		+transition(all,0.5s)
+		.title
+			+fs(24rem)
+			font-weight: 700
+			line-height: 1.3
+			+media-breakpoint-down(lg)
+				+fs(18rem)
+		.des
+			+fs(14rem)
+			line-height: 1.3
+			+media-breakpoint-down(lg)
+				+fs(13rem)
+	.slick-current
+		.banner-caption
+			background: $green
+
+.banner-login
+	background: linear-gradient(55deg, #00994e 10%,#4db347)
+	box-shadow: 5px 5px 20px color-rgba($black,0.25)
+	+pos(abs, calc(50% - 35px) null null auto)
+	+transform(translateY(-50%))
+	z-index: 5
+	padding: 20px 30px
+	width: 100%
+	max-width: 330px
+	+media-breakpoint-down(lg)
+		top: calc(50% - 30px)
+	+media-breakpoint-down(md)
+		+pos(static,null)
+		+transform(translate(0,0))
+		margin: 0 -15px
+		padding: 30px
+		max-width: unset
+		width: auto
+		box-shadow: none
+	&:after
+		content: ''
+		+pos(abs, 30px 0 0 60px)
+		background: #00994e
+		+bor-rad(100% 0 0 0)
+	.login-form
+		+pos(rel,null)
+		z-index: 1
+		+media-breakpoint-down(md)
+			max-width: 330px
+			margin: 0 auto
+	.module-title
+		fs(18rem)
+		font-weight: 700
+		color: $white
+		margin-bottom: 15px
+		+media-breakpoint-down(lg)
+			margin-bottom: 10px
+	.btn-login
+		display: block
+		background: $yellow
+		color: $green
+		text-align: center
+		+bor-rad(50px)
+		+fs(18rem)
+		line-height: 20px
+		padding: 10px 0
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 15px
+		+media-breakpoint-down(lg)
+			margin-bottom: 10px
+			+fs(16rem)
+			padding: 8px 0
+	.form-link
+		+flexbox
+		justify-content: space-between
+		a
+			color: $white
+			+fs(16rem)
+			line-height: 26px
+			display: block
+			+media-breakpoint-down(lg)
+				+fs(14rem)
+			&:after
+				content: '\f105'
+				margin-left: 10px
+				line-height: 1
+			&:hover
+				color: $yellow
+.slick-list
+	.item
+		display: block !important
