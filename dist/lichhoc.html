@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="shortcut icon" href="img/favicon.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#000">
     <link rel="stylesheet" href="./css/core.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>CitiGym</title>
@@ -15,7 +15,7 @@
   <body>
     <div class="fullpage">
       <header>
-        <div class="header-top">
+        <div class="header-top"><a class="btn-visit" href="#!">Tham quan</a>
           <div class="container">
             <div class="header-wrap">
               <div class="hotline"><a href="tel:0988 745 626"><span class="lnr lnr-phone-handset"></span>Hotline: 0988 745 626</a></div>
@@ -36,31 +36,32 @@
                 <div class="top-link"><a href="#!">Về chúng tôi</a><a href="#!">Hỏi đáp</a><a href="#!">Tuyển dụng</a><a href="#!">Liên hệ</a></div>
               </div>
             </div>
-          </div>
+          </div><a class="btn-login" href="#!">Đăng nhập<span class="lnr lnr-lock"></span></a>
         </div>
         <div class="header-main">
           <div class="container">
-            <div class="sitelogo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
-            <div class="menu">
-              <div class="menu-logo">
-                <div class="sitelogo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
-              </div>
-              <div class="menu-left">
-                <div class="menu-wrap">
-                  <ul class="menu-link">
-                    <li class="active"><a href="#!">trang chủ</a></li>
-                    <li><a href="#!">câu lạc bộ</a></li>
-                    <li><a href="#!">điểm mạnh</a></li>
-                  </ul>
+            <div class="header-wrap">
+              <div class="sitelogo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+              <div class="btn-showmenu"><i class="material-icons">menu</i></div>
+              <div class="overlay"> </div>
+              <div class="menu">
+                <div class="menu-left">
+                  <div class="menu-wrap">
+                    <ul class="menu-link">
+                      <li class="active"><a href="#!">trang chủ</a></li>
+                      <li><a href="#!">câu lạc bộ</a></li>
+                      <li><a href="#!">điểm mạnh</a></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="menu-right">
-                <div class="menu-wrap">
-                  <ul class="menu-link">
-                    <li><a href="#!">lịch học</a></li>
-                    <li><a href="#!">dịch vụ</a></li>
-                    <li><a href="#!">tin tức</a></li>
-                  </ul>
+                <div class="menu-right">
+                  <div class="menu-wrap">
+                    <ul class="menu-link">
+                      <li><a href="#!">lịch học</a></li>
+                      <li><a href="#!">dịch vụ</a></li>
+                      <li><a href="#!">tin tức</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -76,19 +77,19 @@
             <h1 class="page-title text-center">Lịch học</h1>
             <div class="room-list">
               <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
                     <div class="img"><img src="img/home/r1.jpg" alt=""></div>
                     <div class="name">Citigym Thành Thái, Q.10</div></a></div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
                     <div class="img"><img src="img/home/r1.jpg" alt=""></div>
                     <div class="name">Citigym Thành Thái, Q.10</div></a></div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
                     <div class="img"><img src="img/home/r1.jpg" alt=""></div>
                     <div class="name">Citigym Thành Thái, Q.10</div></a></div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
                     <div class="img"><img src="img/home/r1.jpg" alt=""></div>
                     <div class="name">Citigym Thành Thái, Q.10</div></a></div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-custom"><a class="room" href="#!">
                     <div class="img"><img src="img/home/r1.jpg" alt=""></div>
                     <div class="name">Citigym Thành Thái, Q.10</div></a></div>
               </div>
@@ -113,8 +114,224 @@
               <div class="date-list"><a href="#!">Thứ 4<strong>6</strong></a><a class="active" href="#!">Thứ 5<strong>7</strong></a><a href="#!">Thứ 6<strong>8</strong></a><a href="#!">Thứ 7<strong>9</strong></a><a href="#!">Chủ nhật<strong>10</strong></a><a href="#!">Thứ 2<strong>11</strong></a><a href="#!">Thứ 3<strong>12</strong></a></div>
             </div>
             <div class="calendar-table">
-              <div class="table-header"></div>
+              <div class="table-header">
+                <div class="th">Thời gian</div>
+                <div class="th">Lớp học</div>
+                <div class="th">Thời lượng</div>
+                <div class="th">Huấn luyện viên</div>
+              </div>
+              <div class="table-content">
+                <div class="schedule">
+                  <div class="schedule-title">
+                    <div class="td">5:45 am</div>
+                    <div class="td">Body Pump</div>
+                    <div class="td">30 phút</div>
+                    <div class="td">Kelly</div>
+                  </div>
+                  <div class="schedule-content">
+                    <div class="content">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                          <div class="img"><img class="w-100" src="img/content/lh1.jpg" alt=""></div>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-10">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                          <div class="btn-wrap text-right"><a class="btn-viewmore" href="#!">Xem thêm</a><a class="btn-register" href="#!">Đăng ký học</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule">
+                  <div class="schedule-title">
+                    <div class="td">5:45 am</div>
+                    <div class="td">Body Pump</div>
+                    <div class="td">30 phút</div>
+                    <div class="td">Kelly</div>
+                  </div>
+                  <div class="schedule-content">
+                    <div class="content">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                          <div class="img"><img class="w-100" src="img/content/lh1.jpg" alt=""></div>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-10">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                          <div class="btn-wrap text-right"><a class="btn-viewmore" href="#!">Xem thêm</a><a class="btn-register" href="#!">Đăng ký học</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule">
+                  <div class="schedule-title">
+                    <div class="td">5:45 am</div>
+                    <div class="td">Body Pump</div>
+                    <div class="td">30 phút</div>
+                    <div class="td">Kelly</div>
+                  </div>
+                  <div class="schedule-content">
+                    <div class="content">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                          <div class="img"><img class="w-100" src="img/content/lh1.jpg" alt=""></div>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-10">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                          <div class="btn-wrap text-right"><a class="btn-viewmore" href="#!">Xem thêm</a><a class="btn-register" href="#!">Đăng ký học</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule">
+                  <div class="schedule-title">
+                    <div class="td">5:45 am</div>
+                    <div class="td">Body Pump</div>
+                    <div class="td">30 phút</div>
+                    <div class="td">Kelly</div>
+                  </div>
+                  <div class="schedule-content">
+                    <div class="content">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                          <div class="img"><img class="w-100" src="img/content/lh1.jpg" alt=""></div>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-10">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                          <div class="btn-wrap text-right"><a class="btn-viewmore" href="#!">Xem thêm</a><a class="btn-register" href="#!">Đăng ký học</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule">
+                  <div class="schedule-title">
+                    <div class="td">5:45 am</div>
+                    <div class="td">Body Pump</div>
+                    <div class="td">30 phút</div>
+                    <div class="td">Kelly</div>
+                  </div>
+                  <div class="schedule-content">
+                    <div class="content">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                          <div class="img"><img class="w-100" src="img/content/lh1.jpg" alt=""></div>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-10">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                          <div class="btn-wrap text-right"><a class="btn-viewmore" href="#!">Xem thêm</a><a class="btn-register" href="#!">Đăng ký học</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+        <section class="home-connect">
+          <div class="container">
+            <h2 class="home-title text-center text-white">kết nối với chúng tôi</h2>
+            <div class="home-des text-center text-white text-500">Get more active online and tag your #CitiGym moments here or leave a comment on our Facebook page with #CitiGym to be part of the conversation. After all, sharing is caring...</div>
+            <div class="social-connect">
+              <div class="row no-gutters justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+                <div class="col-12 col-sm-6 col-lg-3"><a class="fb-post" href="#!">
+                    <figure>
+                      <div class="post-img"><img src="img/home/post1.jpg" alt=""></div>
+                      <div class="fb-info">
+                        <div class="fb-user">dc.conditioning</div>
+                        <time>05.06.2018</time>
+                      </div>
+                      <figcaption>
+                        <div class="fb-des">Row, row, row your boat. 3x10 @ 50kgs Few cues I look for with the DB row: Maintain a neutral spine Begin row with scapula retraction Pull to the hip #keepitsimple</div>
+                      </figcaption>
+                    </figure></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-club">
+          <div class="container">
+            <div class="club-title text-center">cùng khám phá thông tin và lợi ích tập luyện của từng lớp học tại citigym</div>
+            <div class="btn-wrap text-center"><a class="btn-visit" href="#!">Tham quan câu lạc bộ</a></div>
           </div>
         </section>
       </main>

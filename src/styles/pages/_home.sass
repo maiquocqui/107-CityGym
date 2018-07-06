@@ -3,6 +3,14 @@
 	font-weight: 700
 	margin-bottom: 30px
 	text-transform: uppercase
+	+media-breakpoint-down(lg)
+		+fs(28rem)
+		margin-bottom: 25px
+	+media-breakpoint-down(md)
+		+fs(24rem)
+	+media-breakpoint-down(sm)
+		+fs(20rem)
+		margin-bottom: 20px
 
 .home-des
 	+fs(18rem)
@@ -15,6 +23,14 @@
 	text-transform: uppercase
 	color: $main
 	margin-bottom: 40px
+	+media-breakpoint-down(lg)
+		+fs(28rem)
+		margin-bottom: 25px
+	+media-breakpoint-down(md)
+		+fs(24rem)
+	+media-breakpoint-down(sm)
+		+fs(20rem)
+		margin-bottom: 20px
 
 .page-des
 	+fs(15rem)
@@ -35,9 +51,15 @@
 		margin-top: -160px
 		+pos(rel,null)
 		z-index: 1
+		+media-breakpoint-down(lg)
+			margin-top: -80px
+		+media-breakpoint-down(md)
+			margin-top: 0
 	ul.feature-tabs
 		+flexbox
 		margin-bottom: 60px
+		+media-breakpoint-down(md)
+			display: none
 		li
 			flex: 1
 			+transition(all,0.5s)
@@ -49,6 +71,8 @@
 				padding: 30px 0
 				color: $white
 				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					padding: 20px 0
 				&:after
 					content: ''
 					+pos(abs, 99% null null 50%)
@@ -66,13 +90,20 @@
 					align-content: center
 					justify-content: center
 					height: 100px
+					+media-breakpoint-down(lg)
+						height: 70px
 					img
 						max-width: 100%
 						max-height: 100%
+						+media-breakpoint-down(lg)
+							max-width: 70%
+							max-height: 70%
 				.name
 					+fs(18rem)
 					font-weight: 700
 					text-transform: uppercase
+					+media-breakpoint-down(lg)
+						+fs(16rem)
 			&:nth-child(2)
 				a
 					background: #d51840
@@ -103,10 +134,52 @@
 				a
 					&:after
 						opacity: 1
+	.r-tabs-accordion-title
+		margin-top: 15px
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			height: 100%
+			background: #e91836
+			padding: 10px
+			color: $white
+			+pos(rel,null)
+			+media-breakpoint-down(sm)
+			.icon
+				width: 50px
+				height: 50px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+media-breakpoint-down(sm)
+					width: 30px
+					height: 30px
+				img
+					max-width: 80%
+					max-height: 80%
+			.name
+				padding-left: 10px
+				+fs(16rem)
+				text-transform: uppercase
+				font-weight: 700
 	.tab-content
 		padding: 0
+		+media-breakpoint-down(md)
+			padding: 30px 0
+		.row
+			+media-breakpoint-down(sm)
+				margin: 0px -5px
+			.col-6,.col-12
+				+media-breakpoint-down(sm)
+					padding: 0px 5px
 	.home-title
 		margin-bottom: 100px
+		+media-breakpoint-down(lg)
+			margin-bottom: 40px
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
 	.diemmanh-list
 		.diemmanh-item
 			figure
@@ -141,6 +214,10 @@
 						width: 100%
 						+pos(rel,null)
 						z-index: 1
+						+media-breakpoint-down(lg)
+							+fs(18rem)
+						+media-breakpoint-down(md)
+							+fs(16rem)
 					.diemmanh-des
 						+fs(14rem)
 						font-weight: 300
@@ -148,6 +225,8 @@
 						margin-bottom: 10px
 						+pos(rel,null)
 						z-index: 1
+						+media-breakpoint-down(lg)
+							+fs(13rem)
 					.btn-wrap
 						width: 100%
 						+pos(rel,null)
@@ -161,6 +240,8 @@
 						+bor-rad(50px)
 						border: 2px solid $white
 						opacity: 0
+						+media-breakpoint-down(lg)
+							+fs(14rem)
 						&:hover
 							background: $white
 							color: $pink
@@ -194,6 +275,8 @@
 				color: $white
 				+pos(abs, null 0 0 0)
 				z-index: 3
+				+media-breakpoint-down(sm)
+					+fs(13rem)
 	.cosovatchat
 		.vatchat
 			background: $white
@@ -286,6 +369,9 @@
 	clip-path: polygon(0 0, 100% 30px, 100% calc(100% - 70px), 0% 100%)
 	+pos(rel,null)
 	z-index: 2
+	+media-breakpoint-down(sm)
+		-webkit-clip-path: polygon(0 0, 100% 30px, 100% calc(100% - 30px), 0% 100%)
+		clip-path: polygon(0 0, 100% 30px, 100% calc(100% - 30px), 0% 100%)
 	.news-list
 		margin-bottom: 30px
 		.news-col
@@ -320,6 +406,9 @@
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 110px), 0% 100%)
 	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 110px), 0% 100%)
 	z-index: 1
+	+media-breakpoint-down(sm)
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0% 100%)
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0% 100%)
 	&:before
 		content: ''
 		+pos(abs, 0 0 null 0)
@@ -338,6 +427,7 @@
 					background: $black
 					img
 						opacity: 0.8
+						width: 100%
 				.fb-info
 					color: $white
 					+pos(abs, null 10px 10px 10px)
@@ -381,6 +471,9 @@
 	-webkit-clip-path: polygon(0 110px, 100% 0, 100% 100%, 0% 100%)
 	clip-path: polygon(0 110px, 100% 0, 100% 100%, 0% 100%)
 	margin-top: -111px
+	+media-breakpoint-down(sm)
+		-webkit-clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%)
+		clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%)
 	&:before
 		content: ''
 		+pos(abs, 0 null 0 0)
@@ -395,6 +488,8 @@
 		margin: 0 auto 20px
 		+pos(rel,null)
 		z-index: 3
+		+media-breakpoint-down(sm)
+			+fs(24rem)
 	.btn-visit
 		+pos(rel,null)
 		z-index: 3

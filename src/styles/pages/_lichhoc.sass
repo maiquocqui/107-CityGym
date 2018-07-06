@@ -3,8 +3,12 @@
 	.room-list
 		.row
 			margin: 0px -10px
-			.col-12
+			+media-breakpoint-down(sm)
+				margin: 0px -5px
+			.col-12, .col-6
 				padding: 0px 10px
+				+media-breakpoint-down(sm)
+					padding: 0px 5px
 			.col-custom
 				+media-breakpoint-up(xl)
 					flex: 0 0 20%
@@ -13,6 +17,8 @@
 			display: block
 			text-align: center
 			margin-bottom: 20px
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
 			.img
 				img
 					width: 100%
@@ -27,6 +33,7 @@
 		+flexbox
 		flex-wrap: wrap
 		background: darken($white,5%)
+		margin-bottom: 30px
 		.month
 			+fs(16rem)
 			text-align: center
@@ -43,6 +50,9 @@
 		.date-list
 			width: calc(100% - 100px)
 			+flexbox
+			+media-breakpoint-down(sm)
+				display: block
+				white-space: nowrap
 			a
 				display: block
 				text-align: center
@@ -50,6 +60,9 @@
 				+fs(14rem)
 				line-height: 1
 				padding: 10px 0
+				+media-breakpoint-down(sm)
+					width: 100px
+					display: inline-block
 				+ a
 					border-left: 1px solid darken($white,10%)
 				strong
@@ -59,3 +72,169 @@
 				&.active
 					background: $lred
 					color: $white
+	.calendar-table
+		.th, .td
+			&:nth-child(1)
+				width: 200px
+			&:nth-child(2)
+				flex: auto
+			&:nth-child(3)
+				width: 140px
+			&:nth-child(4)
+				width: 200px
+		.table-header
+			+flexbox
+			border-bottom: 1px solid darken($white,10%)
+			.th 
+				+fs(16rem)
+				text-transform: uppercase
+				font-weight: 600
+				color: darken($white,60%)
+				padding: 10px
+		.table-content
+			.schedule
+				.schedule-title
+					+flexbox
+					color: darken($white,60%)
+					border-bottom: 1px solid darken($white,10%)
+					+pos(rel,null)
+					cursor: pointer
+					+transition(all,0.5s)
+					&:after
+						content: '\e881'
+						font-family: 'linearicons-free'
+						+fs(15rem)
+						+pos(abs, 15px 10px null null)
+					.td 
+						+fs(15rem)
+						padding: 15px 10px
+					&:hover
+						color: $lred
+				.schedule-content
+					display: none
+					padding: 30px
+					background: darken($white,5%)
+					.btn-viewmore
+						display: inline-block
+						+fs(16rem)
+						text-transform: uppercase
+						color: darken($white,60%)
+						padding: 0px 40px
+						line-height: 36px
+						border: 2px solid darken($white,60%)
+						+bor-rad(50px)
+						margin-right: 10px
+						&:hover
+							background: darken($white,60%)
+							color: $white
+					.btn-register
+						display: inline-block
+						+fs(16rem)
+						text-transform: uppercase
+						color: $lred
+						padding: 0px 40px
+						line-height: 36px
+						border: 2px solid $lred
+						+bor-rad(50px)
+						&:hover
+							background: $lred
+							color: $white
+				&.active
+					.schedule-title
+						color: $lred
+						background: darken($white,3%)
+						border-bottom-color: $lred
+						.td
+							font-weight: 500
+						&:after
+							content: '\e882'
+	.welcome-member
+		margin-bottom: 60px
+		padding: 0px 30px
+		+media-breakpoint-down(sm)
+			padding: 0
+		&:last-child
+			margin-bottom: 0
+		.content
+			color: darken($white,60%)
+		.btn-visit
+			display: inline-block
+			+fs(16rem)
+			text-transform: uppercase
+			color: darken($white,60%)
+			background: darken($white,5%)
+			padding: 0px 40px
+			line-height: 36px
+			border: 2px solid darken($white,60%)
+			+bor-rad(50px)
+			&:hover
+				background: darken($white,60%)
+				color: $white
+	.schedule-content
+		margin-bottom: 50px
+	.schedule-class
+		table
+			th
+				+fs(16rem)
+				text-transform: uppercase
+				color: darken($white,60%)
+				padding: 12px 15px
+				font-weight: 600
+				border-bottom: 1px solid darken($white,10%)
+				vertical-align: middle
+				&:first-child
+					width: 140px
+				&:last-child
+					width: 280px
+			td
+				padding: 15px
+				vertical-align: middle
+				.number
+					+fs(48rem)
+					font-weight: 800
+					color: darken($white,60%)
+					text-align: center
+				time
+					+fs(15rem)
+				.place
+					+pos(rel,null)
+					width: 130px
+					display: block
+					.img
+						+pos(rel,null)
+						&:before
+							content: ''
+							+pos(abs, 0 null 0 0)
+							right: 0
+							background: $black
+							opacity: 0.5
+						img
+							width: 100%
+					.name
+						+pos(abs, 0 null 0 0)
+						right: 0
+						z-index: 1
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						text-align: center
+						+fs(12rem)
+						color: $white
+						padding: 0px 10px
+				.btn-register
+					display: inline-block
+					+fs(16rem)
+					text-transform: uppercase
+					color: $lred
+					padding: 0px 40px
+					line-height: 36px
+					border: 2px solid $lred
+					+bor-rad(50px)
+					&:hover
+						background: $lred
+						color: $white
+			tr
+				&:nth-child(odd)
+					td
+						background: darken($white,5%)

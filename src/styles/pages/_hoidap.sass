@@ -11,17 +11,28 @@
 	box-shadow: 0 1px 20px color-rgba($black,0.1)
 	border: 1px solid darken($white,5%)
 	text-align: center
+	+media-breakpoint-down(md)
+		margin-bottom: 30px
+	+media-breakpoint-down(sm)
+		padding: 30px 20px
 	.module-title
 		+fs(30rem)
 		font-weight: 700
 		color: darken($white,60%)
 		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			+fs(24rem)
+		+media-breakpoint-down(sm)
+			+fs(18rem)
 	.form-wrap
 		.form-group
 			label
 				+fs(13rem)
 				text-transform: uppercase
 				color: darken($white,40%)
+				display: inline-block
+			input
+				width: 100%
 		.frm-btn
 			input[type="submit"]
 				+fs(16rem)
@@ -36,6 +47,19 @@
 				&:hover
 					background: $main
 					color: $white
+		.checkbox
+			input
+				display: none
+				+ label
+					text-transform: none
+					font-weight: normal
+					+fs(15rem)
+					color: darken($white,60%)
+		.forget
+			text-align: center
+			padding-top: 20px
+			a
+				color: $blue
 .faq-list
 	.faq
 		.faq-title
@@ -48,6 +72,8 @@
 			cursor: pointer
 			+pos(rel,null)
 			+transition(all,0.5s)
+			+media-breakpoint-down(sm)
+				+fs(14rem)
 			&:after
 				content: '\e881'
 				font-family: 'linearicons-free'
@@ -57,8 +83,13 @@
 			display: none
 			padding: 30px 40px 20px
 			background: darken($white,5%)
+			+media-breakpoint-down(sm)
+				padding: 20px
 			.content
 				line-height: 1.8
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+					line-height: 1.5
 		&.active
 			.faq-title
 				color: $lred

@@ -1,5 +1,7 @@
 body
 	padding-top: 100px
+	+media-breakpoint-down(lg)
+		padding-top: 70px
 header
 	+pos(fix, 0 0 null 0)
 	z-index: 1000
@@ -7,8 +9,70 @@ header
 		+flexbox
 		align-items: center
 		align-content: center
+		+media-breakpoint-down(lg)
+			justify-content: space-between
 	.header-top
 		background: $black
+		+pos(rel,null)
+		+flexbox
+		justify-content: space-between
+		.btn-visit
+			display: block
+			+fs(14rem)
+			line-height: 30px
+			text-align: center
+			font-weight: 500
+			text-transform: uppercase
+			white-space: nowrap
+			padding: 0px 30px 0px 50px
+			color: $white
+			background: #d8b700
+			min-width: 200px
+			-webkit-clip-path: polygon(0 0, calc(100% - 15px) 0%, 100% 100%, 0% 100%)
+			clip-path: polygon(0 0, calc(100% - 15px) 0%, 100% 100%, 0% 100%)
+			+media-breakpoint-down(lg)
+				line-height: 20px
+				+fs(12rem)
+				padding-left: 30px
+			+media-breakpoint-down(sm)
+				width: auto
+				margin-right: -8px
+				flex: 1
+				padding: 0
+				-webkit-clip-path: polygon(0 0, 100% 0%, calc(100% - 16px) 100%, 0% 100%)
+				clip-path: polygon(0 0, 100% 0%, calc(100% - 16px) 100%, 0% 100%)
+		.btn-login
+			display: block
+			+fs(14rem)
+			line-height: 30px
+			text-align: center
+			font-weight: 500
+			text-transform: uppercase
+			white-space: nowrap
+			padding: 0px 50px 0px 30px
+			color: $white
+			background: #404040
+			min-width: 200px
+			-webkit-clip-path: polygon(15px 0, 100% 0%, 100% 100%, 0% 100%)
+			clip-path: polygon(15px 0, 100% 0%, 100% 100%, 0% 100%)
+			+media-breakpoint-down(lg)
+				line-height: 20px
+				+fs(12rem)
+				padding-right: 30px
+			+media-breakpoint-down(sm)
+				width: auto
+				margin-left: -8px
+				flex: 1
+				padding: 0
+				-webkit-clip-path: polygon(16px 0, 100% 0%, 100% 100%, 0% 100%)
+				clip-path: polygon(16px 0, 100% 0%, 100% 100%, 0% 100%)
+			.lnr
+				margin-left: 10px
+		.container
+			flex: auto
+			margin: 0
+			+media-breakpoint-down(sm)
+				display: none
 	.col-right
 		flex: auto
 		+flexbox
@@ -16,6 +80,10 @@ header
 		align-content: center
 		justify-content: flex-end
 	.hotline
+		+media-breakpoint-down(lg)
+			margin-left: 30px
+			padding: 10px 0
+			display: inline-block
 		a
 			+flexbox
 			align-items: center
@@ -28,8 +96,14 @@ header
 				margin-right: 5px
 			&:hover
 				color: $red
+				+media-breakpoint-down(lg)
+					color: $white
 	.language
 		margin-left: 30px
+		+media-breakpoint-down(lg)
+			margin-left: 20px
+			padding: 10px 0
+			display: inline-block
 		.dropdown-toggle
 			+flexbox
 			align-items: center
@@ -48,6 +122,8 @@ header
 				margin-right: 5px
 			&:hover
 				color: $red
+				+media-breakpoint-down(lg)
+					color: $white
 		.dropdown-menu
 			background: $main
 			border: none
@@ -61,25 +137,44 @@ header
 					opacity: 1
 					background: color-rgba($white,0.1)
 	.search
+		+media-breakpoint-down(lg)
+			margin: 0
 		.search-wrap
 			.searchbox
 				+flexbox
 				align-items: center
 				align-content: center
 				height: 30px
+				+media-breakpoint-down(lg)
+					justify-content: space-between
+					height: 45px
+					padding: 0px 30px
+					background: color-rgba($black,0.1)
+					border-bottom: 1px solid color-rgba($white,0.1)
 				input
 					background: none
 					+fs(12rem)
 					color: darken($white,50%)
 					border: none
+					+media-breakpoint-down(lg)
+						color: $white
+						+fs(16rem)
 				.searchbutton
 					+fs(14rem)
 					color: darken($white,50%)
+					+media-breakpoint-down(lg)
+						+fs(18rem)
+						color: $white
+						padding-top: 3px
+						opacity: 0.8
 	.top-link
 		+flexbox
 		align-items: center
 		align-content: center
 		margin-left: 20px
+		+media-breakpoint-down(lg)
+			margin-left: 0
+			display: block
 		a
 			display: block
 			line-height: 1
@@ -87,13 +182,43 @@ header
 			color: $white
 			padding: 0px 20px
 			border-left: 1px solid $white
+			+media-breakpoint-down(lg)
+				+fs(16rem)
+				line-height: 1.5
+				font-weight: 700
+				text-transform: uppercase
+				padding: 10px 30px
+				border-left: none
+				border-bottom: 1px dashed color-rgba($white,0.3)
 			&:last-child
 				border-right: 1px solid $white
+				+media-breakpoint-down(lg)
+					border-right: none
 			&:hover
 				color: $red
 	.header-main
 		background: $red
 		+pos(rel,null)
+	.btn-showmenu
+		display: none
+		+media-breakpoint-down(lg)
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			border: 1px solid color-rgba($white,0.3)
+			width: 34px
+			height: 34px
+			color: $white
+			.material-icons
+				+fs(18rem)
+	.overlay
+		+pos(fix,0 null 0 0)
+		right: 0
+		background: $black
+		opacity: 0.7
+		z-index: 800
+		display: none
 	.sitelogo
 		+flexbox
 		align-items: center
@@ -102,6 +227,13 @@ header
 		+pos(abs,0 null 0 50%)
 		+transform(translateX(-50%))
 		z-index: 1
+		+media-breakpoint-down(lg)
+			+pos(static,null)
+			+transform(translateX(0))
+			height: 50px
+		img
+			+media-breakpoint-down(lg)
+				// height: 40px
 	.menu
 		width: 100%
 		+flexbox
@@ -109,18 +241,37 @@ header
 		align-content: center
 		justify-content: space-between
 		height: 70px
+		+media-breakpoint-down(lg)
+			+pos(fix,70px 0 0 0)
+			background: color-rgba($red,0.9)
+			z-index: 1000
+			overflow: auto
+			height: auto
+			border-top: 1px solid color-rgba($white,0.3)
+			display: none
+			// +transform(translateX(-100%))
+			// +transition(all,0.5s)
+			// &.open
+				// +transform(translateX(0))
 		.menu-logo
 			display: none
+		.menu-content
 		.menu-left
 			width: 35%
+			+media-breakpoint-down(lg)
+				width: 100%
 		.menu-right
 			width: 35%
+			+media-breakpoint-down(lg)
+				width: 100%
 		.menu-wrap
 		ul.menu-link
 			+flexbox
 			align-items: center
 			align-content: center
 			justify-content: space-between
+			+media-breakpoint-down(lg)
+				display: block
 			li
 				// + li
 				// 	margin-left: 40px
@@ -131,6 +282,14 @@ header
 					text-transform: uppercase
 					color: $white
 					border-bottom: 1px solid transparent
+					+media-breakpoint-down(lg)
+						padding: 10px 30px
+						border-bottom: 1px dashed color-rgba($white,0.3)
 				&:hover, &.active
-					a
-						border-bottom-color: $white
+					+media-breakpoint-up(xl)
+						a
+							border-bottom-color: $white
+				&.active
+					+media-breakpoint-down(lg)
+						a
+							background: color-rgba($white,0.1)

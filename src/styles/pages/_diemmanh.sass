@@ -10,6 +10,12 @@
 			padding: 40px
 			padding-left: 60px
 			width: 495px
+			+media-breakpoint-down(md)
+				+pos(static,null)
+				width: 100%
+				background: $main
+				padding: 30px
+				padding-left: 50px
 			.content
 				color: $white
 				+fs(15rem)
@@ -49,14 +55,24 @@
 						order: 1
 					.text-col
 						order: 2
+			.feature-img
+				+media-breakpoint-down(sm)
+					margin-bottom: 20px
 			.feature-title
 				+fs(24rem)
 				margin-bottom: 30px
+				+media-breakpoint-down(md)
+					+fs(18rem)
+					margin-bottom: 15px
 			.content
 				+fs(15rem)
 				color: darken($white,60%)
 				text-align: justify
 				margin-bottom: 30px
+				+media-breakpoint-down(md)
+					+fs(13rem)
+				+media-breakpoint-down(sm)
+					margin-bottom: 20px
 			.btn-viewmore
 				display: inline-block
 				+fs(16rem)
@@ -68,6 +84,10 @@
 				+bor-rad(50px)
 				border: 2px solid $lred
 				margin-right: 10px
+				+media-breakpoint-down(md)
+					+fs(13rem)
+					line-height: 34px
+					margin-bottom: 10px
 				&:hover
 					background: $lred
 					color: $white
@@ -81,6 +101,8 @@
 				padding: 0px 40px
 				+bor-rad(50px)
 				border: 2px solid darken($white,20%)
+				+media-breakpoint-down(md)
+					+fs(13rem)
 				&:hover
 					background: $main
 					border-color: $main

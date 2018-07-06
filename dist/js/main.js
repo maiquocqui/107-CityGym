@@ -6,13 +6,17 @@ $(document).ready(function () {
 
     // header script
     if ($(window).width() < 1200) {
-        $('.col-right').insertAfter('.menu-wrap');
-        $('.search').insertAfter('.menu');
+        $('.top-link').insertAfter('.menu-right');
+        $('.search').insertAfter('.top-link');
+        $('.hotline').insertAfter('.search');
+        $('.language').insertAfter('.hotline');
+        // $('.btn-visit').insertAfter('.language');
+        // $('.btn-login').insertAfter('.btn-visit');
     }
 
     $('.btn-showmenu').click(function () {
-        $('.menu').toggleClass('open');
-        $('.overlay').fadeToggle(500);
+        $('.menu').slideToggle(300);
+        // $('.overlay').fadeToggle(500);
     });
     $('.overlay').click(function () {
         $('.menu').removeClass('open');
@@ -411,6 +415,18 @@ $(document).ready(function () {
             $('.faq').find('.faq-content').slideUp(500);
             $(this).parent().addClass('active');
             $(this).parent().find('.faq-content').slideDown(500);
+        }
+    });
+    // schedule
+    $('.schedule .schedule-title').click(function () {
+        if ($(this).parent().hasClass('active') == true) {
+            $(this).parent().removeClass('active');
+            $(this).parent().find('.schedule-content').slideUp(500);
+        } else {
+            $('.schedule').removeClass('active');
+            $('.schedule').find('.schedule-content').slideUp(500);
+            $(this).parent().addClass('active');
+            $(this).parent().find('.schedule-content').slideDown(500);
         }
     });
 });
