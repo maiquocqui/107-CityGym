@@ -1,6 +1,13 @@
 .breadcrumb-wrap
-	background: darken($white,10%)
 	.breadcrumb-img
+		+pos(rel,null)
+		&:after
+			content: ''
+			+pos(abs, 0 null 0 0)
+			right: 0
+			z-index: 1
+			background: url(../img/breadcrumb/bg.png) center bottom no-repeat
+			background-size: 100% auto
 		img
 			width: 100%
 			+media-breakpoint-down(md)

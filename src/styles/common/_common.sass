@@ -576,16 +576,19 @@ input[type="reset"]
 			+ li
 				margin-left: 10px
 			a, span
-				width: 32px
-				height: 32px
+				width: 40px
+				height: 40px
 				+flexbox
 				justify-content: center
 				align-items: center
 				color: $main
-				+fs(14rem)
+				+fs(16rem)
 				font-weight: 600
-				background: darken($white,10%)
+				background: darken($white,5%)
 				+bor-rad(3px)
+			&:hover
+				a, span
+					color: $red
 			&.active
 				a, span
 					background: $red

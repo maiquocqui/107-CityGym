@@ -36,9 +36,12 @@ input, textarea, select
 .form-wrap, .apply-frm
 	.form-group
 		// margin-bottom: 15px
+		label
+			+fs(13rem)
+			// color: darken($white,40%)
 		input, textarea, select
 			@extend .form-control
-			background: darken($white,6%)
+			background: darken($white,5%)
 			width: 100%
 			+bor-rad(0px)
 			line-height: 20px

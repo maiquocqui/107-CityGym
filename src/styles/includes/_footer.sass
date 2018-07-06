@@ -1,4 +1,11 @@
 footer
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, null 0 100% 0)
+		z-index: 1
+		height: 60px
+		background: url(../img/home/bg5.png) bottom left no-repeat
 	.footer-top
 		background: darken($white,80%)
 		color: $white

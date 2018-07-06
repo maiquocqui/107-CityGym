@@ -433,5 +433,17 @@ $(document).ready(function() {
             $(this).parent().find('.job-content').slideDown(500);
         }
     });
+    // faq script
+    $('.faq .faq-title').click(function() {
+        if ($(this).parent().hasClass('active') == true) {
+            $(this).parent().removeClass('active')
+            $(this).parent().find('.faq-content').slideUp(500);
+        } else {
+            $('.faq').removeClass('active');
+            $('.faq').find('.faq-content').slideUp(500);
+            $(this).parent().addClass('active')
+            $(this).parent().find('.faq-content').slideDown(500);
+        }
+    });
 
 });
