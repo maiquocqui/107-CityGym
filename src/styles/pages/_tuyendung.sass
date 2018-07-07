@@ -10,17 +10,35 @@
 				font-weight: 600
 				color: $white
 				padding: 10px 20px
+				&:nth-child(2), &:nth-child(3)
+					+media-breakpoint-down(sm)
+						display: none
+				+media-breakpoint-down(md)
+					+fs(14rem)
+					padding: 10px
 			td
 				padding: 12px 20px
 				+fs(14rem)
 				color: darken($white,60%)
 				border-bottom: 1px solid darken($white,5%)
+				+media-breakpoint-down(md)
+					+fs(14rem)
+					padding: 10px
+				&:nth-child(2), &:nth-child(3)
+					+media-breakpoint-down(sm)
+						display: none
 				&:last-child
 					width: 150px
+					+media-breakpoint-down(sm)
+						width: 100px
 					a
 						color: $lred
+						+media-breakpoint-down(sm)
+							+fs(12rem)
 .career-detail
 	margin-bottom: 80px
+	+media-breakpoint-down(md)
+		margin-bottom: 0px
 	.career-name 
 		+fs(24rem)
 		line-height: 1.3

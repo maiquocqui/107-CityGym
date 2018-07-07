@@ -47,11 +47,16 @@
 			align-content: center
 			justify-content: center
 			font-weight: 500
+			+media-breakpoint-down(sm)
+				+fs(13rem)
+				width: 80px
+				height: 36px
 		.date-list
 			width: calc(100% - 100px)
 			+flexbox
 			+media-breakpoint-down(sm)
 				display: block
+				overflow: auto
 				white-space: nowrap
 			a
 				display: block
@@ -61,14 +66,18 @@
 				line-height: 1
 				padding: 10px 0
 				+media-breakpoint-down(sm)
-					width: 100px
+					width: 80px
 					display: inline-block
+					padding: 5px 0
+					+fs(12rem)
 				+ a
 					border-left: 1px solid darken($white,10%)
 				strong
 					+fs(30rem)
 					font-weight: 600
 					display: block
+					+media-breakpoint-down(sm)
+						+fs(14rem)
 				&.active
 					background: $lred
 					color: $white
@@ -76,6 +85,8 @@
 		.th, .td
 			&:nth-child(1)
 				width: 200px
+				+media-breakpoint-down(sm)
+					width: 100px
 			&:nth-child(2)
 				flex: auto
 			&:nth-child(3)
@@ -85,12 +96,17 @@
 		.table-header
 			+flexbox
 			border-bottom: 1px solid darken($white,10%)
+			+media-breakpoint-down(sm)
 			.th 
 				+fs(16rem)
 				text-transform: uppercase
 				font-weight: 600
 				color: darken($white,60%)
 				padding: 10px
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+					&:nth-child(3), &:nth-child(4)
+						display: none
 		.table-content
 			.schedule
 				.schedule-title
@@ -108,12 +124,21 @@
 					.td 
 						+fs(15rem)
 						padding: 15px 10px
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+							&:nth-child(3),&:nth-child(4)
+								display: none
 					&:hover
 						color: $lred
 				.schedule-content
 					display: none
 					padding: 30px
 					background: darken($white,5%)
+					+media-breakpoint-down(sm)
+						padding: 20px
+					.content
+						+media-breakpoint-down(sm)
+							+fs(13rem)
 					.btn-viewmore
 						display: inline-block
 						+fs(16rem)
@@ -124,6 +149,11 @@
 						border: 2px solid darken($white,60%)
 						+bor-rad(50px)
 						margin-right: 10px
+						+media-breakpoint-down(sm)
+							margin-right: 0
+							margin-bottom: 10px
+							display: block
+							text-align: center
 						&:hover
 							background: darken($white,60%)
 							color: $white
@@ -136,6 +166,9 @@
 						line-height: 36px
 						border: 2px solid $lred
 						+bor-rad(50px)
+						+media-breakpoint-down(sm)
+							display: block
+							text-align: center
 						&:hover
 							background: $lred
 							color: $white
@@ -173,7 +206,10 @@
 	.schedule-content
 		margin-bottom: 50px
 	.schedule-class
+		+media-breakpoint-down(sm)
+			overflow: auto
 		table
+			min-width: 1000px
 			th
 				+fs(16rem)
 				text-transform: uppercase
@@ -182,20 +218,33 @@
 				font-weight: 600
 				border-bottom: 1px solid darken($white,10%)
 				vertical-align: middle
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+					padding: 10px
 				&:first-child
 					width: 140px
+					+media-breakpoint-down(sm)
+						width: 80px
 				&:last-child
 					width: 280px
+					+media-breakpoint-down(sm)
+						width: 240px
 			td
 				padding: 15px
 				vertical-align: middle
+				+media-breakpoint-down(sm)
+					+fs(14rem)
 				.number
 					+fs(48rem)
 					font-weight: 800
 					color: darken($white,60%)
 					text-align: center
+					+media-breakpoint-down(sm)
+						+fs(36rem)
 				time
 					+fs(15rem)
+					+media-breakpoint-down(sm)
+						+fs(14rem)
 				.place
 					+pos(rel,null)
 					width: 130px
@@ -231,6 +280,8 @@
 					line-height: 36px
 					border: 2px solid $lred
 					+bor-rad(50px)
+					+media-breakpoint-down(sm)
+						+fs(14rem)
 					&:hover
 						background: $lred
 						color: $white
